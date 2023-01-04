@@ -873,7 +873,7 @@ padding: 0;
     padding: 0 15px;
 }
 .sale__infor .infor__container{
-    width: 72%;
+    width: 77%;
 
 }
 .sale__tabNav{
@@ -881,7 +881,6 @@ padding: 0;
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 50px;
-    margin-left: -15px;
 }
 .sale__tabNav li{
     list-style-type: none;
@@ -913,6 +912,7 @@ padding: 0;
     font-family: var(--poppin);
     font-size: 55px;
     color: #fff;
+    width: 95%;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 35px;
