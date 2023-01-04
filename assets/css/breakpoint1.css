@@ -1,0 +1,147 @@
+@media (max-width: 1200px){
+:root{
+    
+}
+/* HEADER CSS */
+header{
+    --hh: 91px;
+    height: var(--hh);
+}
+.logobigtech img{
+    width: 110px;
+    height: 65px;
+}
+.header__div{
+    height: 100%;
+}
+.header__bar{
+    height: 100%;
+}
+.header__navigation>li{
+    height: var(--hh);
+}
+.link-section{
+    line-height: var(--hh);
+}
+.header__navigation{
+    margin-left: 80px;
+}
+.header__navigation>li:not(:last-child){
+    margin-right: 36px;
+}
+.selected-lang{
+    display: none;
+}
+.header__action__sepra{
+    display: none;
+}
+
+/* BANNER CSS */
+.banner{
+}
+.banner__content{
+    width: 770px;
+}
+.content__text h2{
+    font-size: 45px;
+}
+/* About CSS */
+.about{
+}
+.about__container{
+    width: 960px;
+}
+.illus-img{
+    padding-left: 20px;
+}
+.illus__image{
+    height: 430px;
+}
+.about__planet{
+    top: 0px;
+    left: 5px;
+}
+.about__content{
+    margin-left: 45px;
+}
+.title{
+    font-size: 34px;
+}
+.about__content__desc{
+    line-height: 1.5;
+}
+/* Partner CSS */
+.partner__container{
+    max-width: 960px;
+}
+.choose .title-subtitle{
+    width: 930px;
+}
+.choose .choose__box__title{
+    font-size: 34px;
+}
+.partner__list{
+    width: calc(100%/4);
+}
+
+/* Choose CSS */
+.choose__container{
+    width: 960px;
+}
+.choose__box1{
+    display: none;
+}
+
+/* SALE CSS */
+/* SALE CSS */
+.sale__container{
+    max-width: 960px;
+}
+
+/* ROADMAP CSS */
+.roadmap .title-subtitle{
+    width: 490px;
+}
+.roadmap__chart{
+    width: 930px;
+}
+.scroll__present{
+    width: 700px;
+}
+
+/* DOCUMENTS CSS */
+.documents__img{
+    width: 400px;
+}
+.documents__content{
+    width: 300px;
+}
+
+.documents .button a{
+    padding: 2px 23px;
+}
+
+/* TEAM CSS */
+.team__container{
+    max-width: 960px;
+}
+.team__item{
+    width: calc(100%/3);
+}
+/* Contact CSS */
+
+.contact__form{
+    width: 930px;
+}
+.contact__infor__item{
+    width: 320px;
+}
+.input-name-email input{
+    width: 370px;
+}
+
+
+
+
+
+}

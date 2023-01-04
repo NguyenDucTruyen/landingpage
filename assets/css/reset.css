@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+:root{
+    --bgc: #030B15;
+    --blue: #00C4F4;
+    --darkblue: #0B1D33;
+    --lightblue: #00C4F4;
+    --green: #12D176;
+    --orange: #FF9700;
+    --red: #ff1d45;
+    --poppin: 'Poppins', sans-serif;
+    --outfit: 'Outfit', sans-serif;
+    --blackopacity: rgba(255, 255, 255, 0.07);
+}
+*::selection{
+    background-color: var(--blue);
+    color: #fff;
+}
+.mt-120{
+    margin-top: 120px ;
+}
+.mt-130{
+    margin-top: 130px ;
+}
+.mb-130{
+    margin-bottom: 130px ;
+}
+.mt-70{
+    margin-top: 70px;
+}
+.mb-110{
+    margin-bottom: 110px;
+}
+.pt-120{
+    padding-top: 120px;
+}
+
+.down-effect{ /* Tao effect chung*/
+    position: absolute;
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+    transition: all ease 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.centerx{
+    display: flex;
+    justify-content: center;
+}
+.centery{
+    display: flex;
+    align-items: center;
+}
+.centerxy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text--blue{
+    color: var(--blue);
+}
+.text--red{
+    color: var(--red);
+}
+.text--green{
+    color: var(--green);
+}
+.text--orange{
+    color: var(--orange);
+}
