@@ -194,7 +194,33 @@ header{
 .input-name-email input{
     width: 270px;
 }
+/* footer css */
 
+.footer__container{
+    width: 720px;
+}
+.footer__content{
+    width: 690px;
+}
+.footer__about,
+.footer__useful-link,
+.footer__community,
+.footer__subcribe{
+    width: 310px;
+}
+
+.footer__bottom{
+    justify-content: center;
+}
+.footer__bottom p{
+    text-align: center;
+    width: 100%;
+}
+.footer__bottom ul{
+    justify-content: center;
+    width: 100%;
+    min-width: 0px;
+}
 
 
 

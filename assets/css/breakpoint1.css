@@ -140,8 +140,28 @@ header{
     width: 370px;
 }
 
-
-
+/* footer css */
+.footer__container{
+    width: 960px;
+}
+.footer__content{
+    width: 930px;
+}
+.footer__about{
+    width: 290px;
+}
+.footer__useful-link{
+    width: 320px;
+}
+.footer__community{
+    width: 220px;
+}
+.footer__subcribe {
+    width: 340px;
+}
+.subcribe__container{
+    margin-left: 0;
+}
 
 
 }

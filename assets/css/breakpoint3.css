@@ -185,9 +185,29 @@ header .button{
     width: 440px;
 }
  
-
-
-
+.footer__container{
+    max-width: 540px;
+    width: 100%;
+}
+.footer__content{
+    max-width: 510px;
+    width: 100%;
+}
+.footer__about,
+.footer__subcribe{
+    width: 100%;
+    
+}
+.footer__useful-link,
+.footer__community{
+    width: 44%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+.useful-link__container{
+    margin-left: 0;
+}
 
 
 }
