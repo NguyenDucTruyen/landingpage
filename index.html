@@ -12,14 +12,9 @@
     <link rel="stylesheet" href="./assets/css/breakpoint1.css">
     <link rel="stylesheet" href="./assets/css/breakpoint2.css">
     <link rel="stylesheet" href="./assets/css/breakpoint3.css">
+
 </head>
 <body>
-    <div class="preview__header centery">
-        <a href=""></a>
-        <div class="preview__header__buynow">
-            <a href="">Buy now</a>
-        </div>
-    </div>
     <header>
         <div class="header__div centerxy">
             <div class="logobigtech centery">
@@ -27,25 +22,25 @@
             </div>
             <div class="header__bar centery">
                 <ul class="header__navigation">
-                    <li >
-                        <a class="link-section" href="">home</a>
+                    <li class="headerMenu__link" >
+                        <a class="link-section" href="#home">home</a>
                         <ul class="header__submenu down-effect">
                             <li> <a href="">HOME ONE</a> </li>
                             <li> <a href="">HOME TWO</a></li>
                         </ul>
                     </li>
-                    <li > <a class="link-section" href="">about us</a>  </li>
-                    <li > <a class="link-section" href="">sales</a> </li>
-                    <li > <a class="link-section" href="">roadmap</a> </li>
-                    <li >
+                    <li class="headerMenu__link" > <a class="link-section" href="#about">about us</a>  </li>
+                    <li class="headerMenu__link" > <a class="link-section" href="#sale">sales</a> </li>
+                    <li class="headerMenu__link" > <a class="link-section" href="#roadmap">roadmap</a> </li>
+                    <li class="headerMenu__link" >
                         <a class="link-section" href="">blog</a>
                         <ul class="header__submenu down-effect">
                             <li> <a href="">OUR BLOG</a> </li>
                             <li> <a href="">BLOG DETAILS</a></li>
                         </ul>
                     </li>
-                    <li >
-                        <a class="link-section" href="">contact us</a>
+                    <li class="headerMenu__link" >
+                        <a class="link-section" href="#contact">contact us</a>
                     </li>
                 </ul>
                 <div class="header__action centery">
@@ -76,13 +71,13 @@
         <div class="mobile-menu">
             <div class="menu__divlogo">
                 <img src="./assets/img/logo-bigtech.png" alt="">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark mobile-menu--close "></i>
             </div>
             <ul class="menu__navigation">
-                <li>
+                <li class="includeLinkDown">
                     <a href="" class=" menu__nav__link">HOME</a>
                     <div class="link__downdiv">
-                        <i class="fa-solid fa-angle-down"></i>
+                        <i class="fa-solid fa-angle-down  link__down__icon "></i>
                     </div>
                     <ul class="menu__2ndnav">
                         <li><a href="" class="menu__nav__link">Home One</a></li>
@@ -92,10 +87,10 @@
                 <li><a href="" class=" menu__nav__link">ABOUT US</a></li>
                 <li><a href="" class=" menu__nav__link">SALES</a></li>
                 <li><a href="" class=" menu__nav__link">ROADMAP</a></li>
-                <li>
+                <li class="includeLinkDown">
                     <a href="" class=" menu__nav__link">BLOG</a>
                     <div class="link__downdiv">
-                        <i class="fa-solid fa-angle-down"></i>
+                        <i class="fa-solid fa-angle-down link__down__icon"></i>
                     </div>
                     <ul class="menu__2ndnav">
                         <li><a href="" class="menu__nav__link">Our Blog</a></li>
@@ -127,7 +122,7 @@
     </header>
     <main>
         <!-- SECTION 1 BANNER -->
-        <section class="banner pt-120">
+        <section class="banner pt-120" id="home">
             
             <div class="banner__contain">
                 <div class="banner__introduce">
@@ -155,19 +150,19 @@
                         <div class="banner__countdowntime">
                             <div class="banner__coutdownbox">
                                 <div class="banner__timecount-box centery">
-                                    <span class="timecount-box__number text--blue">32</span>
+                                    <span class="timecount-box__number timecount-box__number__day text--blue">32</span>
                                     <span class="timecount-box__note">Days</span>
                                 </div>
                                 <div class="banner__timecount-box centery">
-                                    <span class="timecount-box__number text--orange">07</span>
+                                    <span class="timecount-box__number timecount-box__number__hour text--orange">07</span>
                                     <span class="timecount-box__note">Hour</span>
                                 </div>
                                 <div class="banner__timecount-box centery">
-                                    <span class="timecount-box__number text--red">14</span>
+                                    <span class="timecount-box__number timecount-box__number__minute text--red">14</span>
                                     <span class="timecount-box__note">Minute</span>
                                 </div>
                                 <div class="banner__timecount-box centery">
-                                    <span class="timecount-box__number text--green">52</span>
+                                    <span class="timecount-box__number timecount-box__number__seccond text--green">52</span>
                                     <span class="timecount-box__note">Second</span>
                                 </div>
                                 
@@ -183,7 +178,7 @@
             </div>
         </section>
         <!-- SECTION 2 ABOUT -->
-        <section class="about mt-120 mb-130">
+        <section class="about pt-120 mb-130" id="about">
             <div class="about__container">
                 <div class="illus-img centerx">
                     <img src="./assets/img/bitcoin.png" alt="" class="illus__image">
@@ -208,7 +203,7 @@
             </div>
         </section>
         <!-- SECTION 3 PARTNER -->
-        <section class="partner mb-130">
+        <div class="partner mb-130" id="partner">
             <div class="partner__container">
                 <div class="partner__title"><span class="sub-title">OUR TOP PARTNER</span></div>
                 <div class="partner__box">
@@ -227,9 +222,9 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
         <!-- SECTION 4 CHOOSE -->
-        <section class="choose mb-130">
+        <div class="choose mb-130" id="choose">
             <div class="choose__container">
                 <div class="title-subtitle">
                     <span class="sub-title">why choose us</span>
@@ -292,10 +287,10 @@
                 </div>
                 <div class="choose__slide__progress"></div>
             </div>
-        </section> 
+        </div> 
         <!-- SECTION 5 SALE -->
         
-        <section class="sale mt-130 mb-130">
+        <section class="sale mt-130 mb-130" id="sale">
             <div class="sale__container centery">
                 <div class="sale__infor">
                     <div class="infor__container">
@@ -330,7 +325,7 @@
 
         <div class="area-bg">
         <!-- SECTION 6 ROADMAP -->
-            <section class="roadmap">
+            <section class="roadmap" id="roadmap">
                 <div class="roadmap__container">
                     <div class="roadmap__title-subtitle">
                         <div class="title-subtitle">
@@ -453,7 +448,7 @@
             </section>   
           <!-- SECTION 8 TEAM  -->
         </div>
-        <section class="team ">
+        <div class="team ">
             <div class="title-subtitle">
                 <span class="sub-title">OUR TEAM</span>
                 <h2 class="title">The Leadership <br> <span>Team</span></h2>
@@ -572,9 +567,9 @@
                     </ul>
                 </div>
             </div>
-        </section>   
+        </div>   
         <!-- SECTION 9 CONTACT -->
-        <section class="contact ">
+        <section class="contact " id="contact">
             <div class="title-subtitle">
                 <span class="sub-title">CONTACT</span>
                 <h2 class="title"><span>Contact</span> ICO Crypto</h2>
@@ -695,4 +690,5 @@
         </div>
     </footer>
 </body>
+<script src="./assets/js/javascript.js" ></script>
 </html>

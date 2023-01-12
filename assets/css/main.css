@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     position: relative;
     font-family: var(--outfit);
@@ -11,40 +15,14 @@ body{
     background-position: center;
     background-size: cover;
 }
-/* Preview header */
-.preview__header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    height: 54px;
-    justify-content: space-between;
-    font-family:  Helvetica, Arial, sans-serif;
-    background-color: #262626;
-    
-}
-.preview__header>a{
-    width: 152px;
-    height: 18px;
-    background: url("../img/logo.svg");
-    margin-left: 20px;
-}
-.preview__header__buynow{
-    margin-right: 20px;
-}
-.preview__header__buynow a{
-    display: inline-block;
-    font-size: 14px;
-    color: #fff;
-    padding: 5px 20px;
-    background-color: #7AA93C;
-    border-radius: 5px;
-    text-decoration: none;
-    z-index: 2;
-}
-.preview__header__buynow a:hover{
-    background-color:#6d9834;
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 /*  Css Header */
 /*  Css Header */
@@ -53,11 +31,13 @@ header{
     width: 100%;
     height: 104px;
     background-color: var(--bgc);
-    margin-top: 54px;
     border-bottom: 0.2px solid rgba(0, 196, 244, 0.1);
     text-transform: uppercase;  
     font-family: var(--outfit);
-    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    position: fixed;
 }
 .header__div{
     width: 100%;
@@ -120,9 +100,10 @@ header{
     transform-origin: 0 0;  
     transform: scale(1,1);
 }
-.header__navigation>li:first-child a::after{
-    width: 100%;
-    transform: translateX(0);
+li.activeSection>a::after{
+    transform-origin: 0 0;  
+    transform: scale(1,1);
+    
 }
 
 .header__submenu{
@@ -269,11 +250,17 @@ padding: 0;
     width: 300px;
     background: var(--darkblue);
     right: 0;
-    top: 54px;
+    top: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateX(101%);
     transition: transform  ease-in-out 0.7s;
+    
+}
+.mobile-menu--open{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
 }
 .menu-backdrop{
     position: fixed;
@@ -285,6 +272,11 @@ padding: 0;
     z-index: 2;
     opacity: 0;
     visibility: hidden;
+    transition:  all ease 0.4s;
+}
+.menu-backdrop--visibility{
+    opacity: 0.5;
+    visibility: visible;
 }
 .menu__divlogo{
     width: 300px;
@@ -300,17 +292,27 @@ padding: 0;
     line-height: 30px;
     text-align: center;
     color: var(--blue);
-    
+    transform-origin: 0 0;
+    animation: rotate linear 0.4s 1s;
 }
 .menu__navigation{
     display: block;
     width: 300px;
     list-style-type: none;
 }
+
 .menu__navigation>li{
     width: 300px;
     height: 45px;
     position: relative;
+}
+.menu__navigation .includeLinkDown{
+    height: none;
+    transition: all ease 0.4s;
+}
+.menu__navigation .includeLinkDown.showNav{
+    height: 135px;
+    
 }
 .menu__nav__link{
     line-height: 24px;
@@ -341,19 +343,28 @@ padding: 0;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
+    transition: all ease 0.4s;
+}
+.menu__navigation .link__downdiv>i.rotateUp{
+    transform: rotate(90deg);
+    top: 6px;
 }
 .menu__navigation>li:last-child .menu__nav__link{
     border-bottom: 1px solid rgb(255, 255, 255 , 6%);
 }
-.menu__navigation>li:first-child,
-.menu__navigation>li:nth-child(5) {
-    height: 135px;
-}
+
 .menu__2ndnav{
     list-style-type: none;
     position: absolute;
     left: 0;
     top: 45px;
+    display: block;
+    opacity: 0;
+}
+.showNav .menu__2ndnav{
+    transition:  all ease 0.4s;
+    opacity: 1;
+    transition-delay: 0.1s;
 }
 .menu__2ndnav li{
     height: 45px;
@@ -858,6 +869,7 @@ padding: 0;
     background-position: center;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 130px 0;
 }
 .sale__container{
@@ -1364,14 +1376,6 @@ padding: 0;
     transition: opacity  ease 0.4s;
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
 .team__name{
     font-size: var(--poppin);
     font-size: 22px;
@@ -1413,7 +1417,7 @@ padding: 0;
 /* CONTACT CSS */
 .contact{
     background: var(--bgc);
-    padding: 70px 0 110px;
+    padding:120px 0 110px;
     
 }
 .contact__container{
