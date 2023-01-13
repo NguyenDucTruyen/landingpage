@@ -74,6 +74,9 @@ header{
 .partner__container{
     max-width: 960px;
 }
+.choose__bigarea{
+    width: 930px;
+}
 .choose .title-subtitle{
     width: 930px;
 }

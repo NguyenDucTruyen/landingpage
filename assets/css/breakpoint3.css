@@ -86,12 +86,14 @@ header .button{
 .choose .choose__box__title{
     font-size: 36px;
 }
-.choose__box3{
-    display: none;
+.choose__bigarea{
+    max-width: 510px;
+    width: 90%;
 }
 .choose__box{
     max-width: 530px;
     width: 90%;
+    min-width: 300px;
 }
 .choose__item{
     box-sizing: border-box;

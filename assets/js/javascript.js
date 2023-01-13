@@ -136,3 +136,43 @@ const observer = new IntersectionObserver((entries) => {
       document.querySelector(".headerBar").classList.remove("fixedHeader");
     }
   });
+  
+
+  (async ()=>   // async IIFE code for slider.
+  {
+  const
+    interval       = 1500  // ms
+  , paddingRight   = 20
+  , slidesWrapper  = document.querySelector('.choose__area')
+  , slides         = document.querySelectorAll('.choose__box')
+  // bar xanh = width 25%
+  ,bar= document.querySelector("#barThumb")
+  , barWidth = bar.clientWidth
+  , delay          = ms => new Promise(r => setTimeout(r, ms))
+  , movLeft = (el, mov,ba,width) => new Promise(r =>
+    {
+    el.ontransitionend =_=>
+      {
+      el.ontransitionend = null
+      el.style.transition = 'none';
+      r()
+      }
+    el.style.transition = '1s';
+    el.style.transform  = `translateX(${-mov}px)`;
+    //cong width cho bar
+
+    ba.style.width =`${width*index}px`;
+    });
+
+  let index = 0;
+
+  while (true) // infinite carrousel loop
+    {
+    await delay( interval )
+    await movLeft( slidesWrapper, slides[index].clientWidth + paddingRight,bar,barWidth)
+
+    slidesWrapper.appendChild( slides[index] )  // mov first slide to the end
+    slidesWrapper.style.transform    = `translateX(0)` // rest translateX
+    index = ++index % slides.length
+    }
+  })()

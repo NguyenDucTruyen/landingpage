@@ -48,19 +48,20 @@ header{
 @keyframes fadeDown{
     from{
         transform: translateY(-20px);
-        opacity: 0;
+        /* opacity: 0; */
     }
     to{
         transform: translateY(0);
-        opacity: 1;
+        /* opacity: 1; */
     }
 }
 .fixedHeader{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
     background-color: var(--bgc);
-    transition: all ease 0.4s;
+    /* transition: all ease 0.4s; */
     animation: fadeDown ease 1s;
 }
 .logobigtech{
@@ -288,7 +289,7 @@ padding: 0;
     right: 0;
     bottom: 0;
     background: var(--darkblue);
-    z-index: 2;
+    z-index: 90;
     opacity: 0;
     visibility: hidden;
     transition:  all ease 0.4s;
@@ -316,7 +317,7 @@ padding: 0;
 .mobile-menu--close{
 }
 .spinActive{
-    animation: rotate linear 0.4s 0.2s;
+    animation: rotate linear 0.4s 0.3s;
 }
 .menu__navigation{
     display: block;
@@ -331,7 +332,7 @@ padding: 0;
 }
 .menu__navigation .includeLinkDown{
     height: none;
-    transition: all ease 0.4s;
+    transition: all ease 0.7s;
 }
 .menu__navigation .includeLinkDown.showNav{
     height: 135px;
@@ -383,9 +384,9 @@ padding: 0;
     top: 45px;
     display: block;
     opacity: 0;
+    transition:  all ease 0.3s;
 }
 .showNav .menu__2ndnav{
-    transition:  all ease 0.4s;
     opacity: 1;
     transition-delay: 0.1s;
 }
@@ -810,11 +811,17 @@ padding: 0;
 .choose .choose__box__title{
     font-size: 42px;
 }
+.choose__bigarea{
+    margin: auto;
+    max-width: 1320px;
+    padding: 0 15px;
+}
 .choose__area{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
+    flex-wrap: nowrap;
     padding-bottom: 54px;
 }
 
@@ -871,17 +878,14 @@ padding: 0;
     color: var(--blue);
 }
 .choose__slide__progress{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 82%;
+    width: 100%;
     height: 3px;
     background-color: #A4B4C3;
+    border-radius: 100px;
+    overflow: hidden;
 }
-.choose__slide__progress::after{
-    content: '';
-    position: absolute;
+#barThumb{
+    border-radius: 100px;
     width: 25%;
     height: 100%;
     left: 0;
@@ -1123,7 +1127,6 @@ padding: 0;
     height: 8px;
 }
 .roadmap__chart::-webkit-scrollbar-thumb{
-    
     background-color: #8f8f8f;
     border-radius: 100px;
 }
@@ -1331,6 +1334,7 @@ padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 80px;
 }
 .documents__img{
     width: 550px;
@@ -1859,4 +1863,10 @@ footer::before{
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+}
+
+
+
+.overflow{
+overflow: hidden;
 }

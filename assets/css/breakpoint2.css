@@ -102,8 +102,8 @@ header{
 .choose__container{
     width: 720px;
 }
-.choose__box2{
-    display: none;
+.choose__bigarea{
+    width: 690px;
 }
 .choose__box{
     width: 335px;
