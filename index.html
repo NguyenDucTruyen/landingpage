@@ -15,8 +15,8 @@
 
 </head>
 <body>
-    <header>
-        <div class="header__div centerxy">
+    <header id="header">
+        <div class="header__div fixedHeader  centerxy">
             <div class="logobigtech centery">
                 <img src="./assets/img/logo-bigtech.png" alt="">
             </div>
@@ -179,12 +179,12 @@
         </section>
         <!-- SECTION 2 ABOUT -->
         <section class="about pt-120 mb-130" id="about">
-            <div class="about__container">
-                <div class="illus-img centerx">
+            <div class="about__container overflow">
+                <div class="illus-img positionLeft centerx animationFadeTwoSide">
                     <img src="./assets/img/bitcoin.png" alt="" class="illus__image">
                     <img src="./assets/img/planet.png" alt="" class="about__planet">
                 </div>
-                <div class="about__content">
+                <div class="about__content positionRight animationFadeTwoSide">
                     <div class="title-subtitle">
                         <span class="sub-title">who we are</span>
                         <h2 class="title">The World's <span>1st ICO</span> Platform That Offers Rewards</h2>
@@ -290,22 +290,23 @@
         </div> 
         <!-- SECTION 5 SALE -->
         
-        <section class="sale mt-130 mb-130" id="sale">
-            <div class="sale__container centery">
-                <div class="sale__infor">
+        <section class="sale mt-130 " id="sale">
+            <div class="sale__container centery overflow">
+                <div class="sale__infor positionLeft animationFadeTwoSide">
                     <div class="infor__container">
                         <ul class="sale__tabNav">
-                            <li> <button class="sale__tabNav__btn"><p>FINDING ALLOCATION</p>    </button></li>
-                            <li> <button class="sale__tabNav__btn"> <p>TOKEN ALLOCATION</p></button></li>
+                            <li> <button class="sale__tabNav__btn choosedBtn"><p>FINDING ALLOCATION</p>    </button></li>
+                            <li> <button class="sale__tabNav__btn "> <p>TOKEN ALLOCATION</p></button></li>
                         </ul>
                         <div class="sale__content">
-                            <h2 class="sale__title">1 CNL = 0.0863 BTC</h2>
+                            <h2 class="sale__title sale__title1">1 CNL = 0.0863 BTC</h2>
+                            <h2 class="sale__title sale__title2">2 CNL = 0.0967 BTC</h2>
                             <p class="sale__introduce">The World's 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
                         </div>
                         <a href="" class="sale__buybtn">BUY NOW</a>
                     </div>
                 </div>
-                <div class="sale__diagram ">
+                <div class="sale__diagram positionRight animationFadeTwoSide">
                     <div class="diagram__container ">
                         <img src="./assets/img/chart.png" alt="" class="sale__chart">
                         <ul class="sale__chart__note">
@@ -323,9 +324,9 @@
         </section>   
         
 
-        <div class="area-bg">
+        <section class="area-bg">
         <!-- SECTION 6 ROADMAP -->
-            <section class="roadmap" id="roadmap">
+            <div class="roadmap" id="roadmap">
                 <div class="roadmap__container">
                     <div class="roadmap__title-subtitle">
                         <div class="title-subtitle">
@@ -420,17 +421,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="roadmap__scroll">
+                    <!-- <div class="roadmap__scroll">
                         <div class="scroll__present"></div>
-                    </div>
+                    </div> -->
                 </div>
-            </section>   
+            </div>   
         <!-- SECTION 7 DOCUMENTS -->
-            <section class="documents mt-130">
-                <div class="documents__img centerx">
+            <section class="documents mt-130 overflow">
+                <div class="documents__img centerx positionLeft animationFadeTwoSide">
                     <img src="./assets/img/document_img.png" alt="">
                 </div>
-                <div class="documents__content">
+                <div class="documents__content positionRight animationFadeTwoSide">
                     <div class="title-subtitle">
                         <span class="sub-title">WHITEPAPER</span>
                         <h2 class="title">Read Bigtech <span>Documents</span></h2>
@@ -447,7 +448,7 @@
                 </div>
             </section>   
           <!-- SECTION 8 TEAM  -->
-        </div>
+        </section>
         <div class="team ">
             <div class="title-subtitle">
                 <span class="sub-title">OUR TEAM</span>
@@ -625,12 +626,12 @@
     <footer>
         <div class="footer_container">
             <div class="footer__scroll centerx">
-                <button  class="footer__button-scroll centerxy">
+                <a href="#home" class="footer__button-scroll centerxy">
                     <i class="fa-sharp fa-solid fa-arrow-up"></i>
-                </button>
+                </a>
             </div>
-            <div class="footer__content">
-                <div class="footer__about">
+            <div class="footer__content overflow">
+                <div class="footer__about positionBelow animationFadeUp delay100ms">
                     <a href="" class="footer__logo">
                         <img src="./assets/img/logo-bigtech.png" alt="">
                     </a>
@@ -643,7 +644,7 @@
                    </ul>
 
                 </div>
-                <div class="footer__useful-link">
+                <div class="footer__useful-link positionBelow animationFadeUp delay200ms">
                     <div class="useful-link__container">
                         <h4 class="footer__title">USEFUL LINKS</h4>
                         <ul class="footer__ul">
@@ -655,7 +656,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer__community">
+                <div class="footer__community positionBelow animationFadeUp delay300ms">
                     <h4 class="footer__title">COMMUNITY</h4>
                     <ul class="footer__ul">
                         <li class="footer__list"> <a href="">Help Center</a> </li>
@@ -665,7 +666,7 @@
                         <li class="footer__list"> <a href="">Newsletters</a> </li>
                     </ul>
                 </div>
-                <div class="footer__subcribe">
+                <div class="footer__subcribe positionBelow animationFadeUp delay400ms">
                     <div class="subcribe__container">
                         <h4 class="footer__title">SUBCRIBE NEWSLETTERS</h4>
                         <p class="footer__subcribe__content">Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo</p>

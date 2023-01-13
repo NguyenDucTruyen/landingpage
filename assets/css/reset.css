@@ -72,3 +72,33 @@
 .text--orange{
     color: var(--orange);
 }
+.positionRight{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all ease 1s .1s;
+}
+.positionLeft{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all ease 1s .1s;
+}
+.positionBelow{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all ease 1s .1s;
+}
+.delay100ms{
+    transition-delay: 100ms;
+}
+.delay200ms{
+    transition-delay: 200ms;
+}
+.delay300ms{
+    transition-delay: 300ms;
+}
+.delay400ms{
+    transition-delay: 400ms;
+}
+.overflow{
+    overflow: hidden;
+}

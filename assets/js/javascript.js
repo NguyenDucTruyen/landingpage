@@ -4,32 +4,41 @@ let headerBtn = document.querySelector(".header__menu-bar");
 let mobileMenu = document.querySelector(".mobile-menu");
 let closeMobileMenu = document.querySelector(".mobile-menu--close");
 let menuBackDrop = document.querySelector(".menu-backdrop");
-headerBtn.onclick=()=>{
-    mobileMenu.classList.toggle("mobile-menu--open");
-    menuBackDrop.classList.toggle("menu-backdrop--visibility");
-}
-closeMobileMenu.onclick =()=>{
-    mobileMenu.classList.toggle("mobile-menu--open");
-    menuBackDrop.classList.toggle("menu-backdrop--visibility");
-}
-menuBackDrop.onclick = ()=>{
-    mobileMenu.classList.toggle("mobile-menu--open");
-    menuBackDrop.classList.toggle("menu-backdrop--visibility");
-}
-let linkDownBtns = document.querySelectorAll(".link__down__icon");
-for(let linkDownBtn of linkDownBtns){
-    linkDownBtn.onclick=(e)=>{
-        let includeLinkDown = e.target.parentElement.parentElement;
-        includeLinkDown.classList.toggle("showNav");
-        linkDownBtn.classList.toggle("rotateUp");
+
+
+function showAndHideMobileMenu(){
+    headerBtn.onclick=()=>{
+        mobileMenu.classList.toggle("mobile-menu--open");
+        menuBackDrop.classList.toggle("menu-backdrop--visibility");
+    }
+    closeMobileMenu.onclick =()=>{
+        mobileMenu.classList.toggle("mobile-menu--open");
+        menuBackDrop.classList.toggle("menu-backdrop--visibility");
+    }
+    menuBackDrop.onclick = ()=>{
+        mobileMenu.classList.toggle("mobile-menu--open");
+        menuBackDrop.classList.toggle("menu-backdrop--visibility");
     }
 }
+showAndHideMobileMenu();
+
+let linkDownBtns = document.querySelectorAll(".link__down__icon");
+function sidebarLiDown(){
+    for(let linkDownBtn of linkDownBtns){
+        linkDownBtn.onclick=(e)=>{
+            let includeLinkDown = e.target.parentElement.parentElement;
+            includeLinkDown.classList.toggle("showNav");
+            linkDownBtn.classList.toggle("rotateUp");
+        }
+    }
+}
+sidebarLiDown();
 
 
-const li = document.querySelectorAll(".headerMenu__link");
-const sec = document.querySelectorAll("section");
 
 function activateMenu(){
+    const li = document.querySelectorAll(".headerMenu__link");
+    const sec = document.querySelectorAll("section");
     let len = sec.length;
     while(--len && window.scrollY+200< sec[len].offsetTop){}
     li.forEach(ltx=>ltx.classList.remove("activeSection"));
@@ -39,8 +48,6 @@ activateMenu();
 window.addEventListener("scroll",activateMenu);
 
 // Count down
-
-
     function countDown(){
         let countDownDate = new Date("Jan 22, 2023 ").getTime();
         let x = setInterval(function(){
@@ -59,8 +66,59 @@ window.addEventListener("scroll",activateMenu);
          
         },1000);
         // clearInterval(x);
-    }
+}
 countDown();
 
-// 
+let saleTabNavBtns = document.querySelectorAll(".sale__tabNav__btn");
+function chooseSaleTitle(){
+    for(let i=0;i<saleTabNavBtns.length;i++){
+        saleTabNavBtns[i].onclick=()=>{
+            saleTabNavBtns[i].classList.add("choosedBtn");
+            if(i==0){
+                saleTabNavBtns[1].classList.remove("choosedBtn");
+                document.querySelector(".sale__title1").style.display='inline-block';
+                document.querySelector(".sale__title2").style.display='none';
+            }
+            if(i==1){
+                saleTabNavBtns[0].classList.remove("choosedBtn");
+                document.querySelector(".sale__title2").style.display='inline-block';
+                document.querySelector(".sale__title1").style.display='none';
+            }
+        }
+        
+    }
+}
+chooseSaleTitle();
 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fadeIn");
+        // console.log(entry.target)
+      } else {
+        entry.target.classList.remove("fadeIn");
+      }
+    });
+  });
+  
+  let show = document.querySelectorAll(".animationFadeTwoSide")
+  show.forEach((col)=>{
+    observer.observe(col)
+  })
+
+  const obser = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fadeUp");
+        // console.log(entry.target)
+      } else {
+        entry.target.classList.remove("fadeUp");
+      }
+    });
+  });
+  
+  let go = document.querySelectorAll(".animationFadeUp")
+  go.forEach((col)=>{
+    obser.observe(col)
+  })
