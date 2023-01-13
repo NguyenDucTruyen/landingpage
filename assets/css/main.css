@@ -14,7 +14,6 @@ body{
     line-height: 1.75;
     background-position: center;
     background-size: cover;
-    /* overflow: hidden; */
 }
 
 @keyframes rotate{
@@ -1064,7 +1063,7 @@ padding: 0;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 /* SECTION 6 ROADMAP */
 /* SECTION 6 ROADMAP */

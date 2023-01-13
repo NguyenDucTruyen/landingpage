@@ -70,7 +70,7 @@ window.addEventListener("scroll",activateMenu);
         },1000);
         // clearInterval(x);
 }
-// countDown();
+countDown();
 
 let saleTabNavBtns = document.querySelectorAll(".sale__tabNav__btn");
 function chooseSaleTitle(){
