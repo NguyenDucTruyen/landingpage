@@ -10,14 +10,17 @@ function showAndHideMobileMenu(){
     headerBtn.onclick=()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
+        closeMobileMenu.classList.toggle("spinActive");
     }
     closeMobileMenu.onclick =()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
+        closeMobileMenu.classList.toggle("spinActive");
     }
     menuBackDrop.onclick = ()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
+        closeMobileMenu.classList.toggle("spinActive");
     }
 }
 showAndHideMobileMenu();
@@ -67,7 +70,7 @@ window.addEventListener("scroll",activateMenu);
         },1000);
         // clearInterval(x);
 }
-countDown();
+// countDown();
 
 let saleTabNavBtns = document.querySelectorAll(".sale__tabNav__btn");
 function chooseSaleTitle(){
@@ -122,3 +125,14 @@ const observer = new IntersectionObserver((entries) => {
   go.forEach((col)=>{
     obser.observe(col)
   })
+
+  window.addEventListener("scroll", () => {
+    if (
+      document.body.scrollTop > 180 ||
+      document.documentElement.scrollTop > 180
+    ) {
+      document.querySelector(".headerBar").classList.add("fixedHeader");
+    } else {
+      document.querySelector(".headerBar").classList.remove("fixedHeader");
+    }
+  });

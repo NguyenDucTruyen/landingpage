@@ -99,6 +99,9 @@
 .delay400ms{
     transition-delay: 400ms;
 }
+section{
+    overflow: hidden;
+}
 .overflow{
     overflow: hidden;
 }

@@ -38,20 +38,31 @@ header{
     top: 0;
     left: 0;
     z-index: 90;
-    position: relative;
+    overflow: hidden;
 }
 .header__div{
     width: 100%;
     height: 104px;
     padding: 0 15px;
+    overflow: hidden;
+}
+@keyframes fadeDown{
+    from{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 .fixedHeader{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 104px;
     background-color: var(--bgc);
+    transition: all ease 0.4s;
+    animation: fadeDown ease 1s;
 }
 .logobigtech{
     position: relative;
@@ -256,7 +267,7 @@ padding: 0;
 .mobile-menu{
     position: fixed;
     z-index: 99;
-    height: 100%;
+    height: 100vh;
     width: 300px;
     background: var(--darkblue);
     right: 0;
@@ -294,7 +305,7 @@ padding: 0;
     display: flex;
     justify-content: space-between;
 }
-.menu__divlogo i{
+.sideBar__closeBtn{
     font-size: 19px;
     width: 35px;
     height: 35px;
@@ -302,6 +313,11 @@ padding: 0;
     text-align: center;
     color: var(--blue);
     cursor: pointer;
+}
+.mobile-menu--close{
+}
+.spinActive{
+    animation: rotate linear 0.4s 0.2s;
 }
 .menu__navigation{
     display: block;
