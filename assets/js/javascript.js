@@ -4,8 +4,14 @@ let headerBtn = document.querySelector(".header__menu-bar");
 let mobileMenu = document.querySelector(".mobile-menu");
 let closeMobileMenu = document.querySelector(".mobile-menu--close");
 let menuBackDrop = document.querySelector(".menu-backdrop");
-
-
+// Loading
+const loader = document.querySelector(".loadingPage");
+function showPage(){
+  setTimeout(()=>{
+    loader.style.display="none";
+  },1000);
+}
+// Show and hide mobile menu 
 function showAndHideMobileMenu(){
     headerBtn.onclick=()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
@@ -25,6 +31,7 @@ function showAndHideMobileMenu(){
 }
 showAndHideMobileMenu();
 
+//When click blue down button in mobile menu (side bar) 
 let linkDownBtns = document.querySelectorAll(".link__down__icon");
 function sidebarLiDown(){
     for(let linkDownBtn of linkDownBtns){
@@ -79,13 +86,13 @@ function chooseSaleTitle(){
             saleTabNavBtns[i].classList.add("choosedBtn");
             if(i==0){
                 saleTabNavBtns[1].classList.remove("choosedBtn");
-                document.querySelector(".sale__title1").style.display='inline-block';
-                document.querySelector(".sale__title2").style.display='none';
+                document.querySelector(".sale__content1").style.display='inline-block';
+                document.querySelector(".sale__content2").style.display='none';
             }
             if(i==1){
                 saleTabNavBtns[0].classList.remove("choosedBtn");
-                document.querySelector(".sale__title2").style.display='inline-block';
-                document.querySelector(".sale__title1").style.display='none';
+                document.querySelector(".sale__content2").style.display='inline-block';
+                document.querySelector(".sale__content1").style.display='none';
             }
         }
         
@@ -138,11 +145,25 @@ const observer = new IntersectionObserver((entries) => {
   });
   
 
+  // let activeTrue = true;
+  // let choose__area = document.querySelector(".choose__area");
+  // while(true){
+  //   choose__area.addEventListener("mouseover",()=>{
+  //     activeTrue=false;})
+  //   slidesWrapper.addEventListener("mouseout",()=>{
+  //     activeTrue=true;})
+  // }
+
+
+
+function sliderActive(){
+  
   (async ()=>   // async IIFE code for slider.
   {
-  const
+  let
     interval       = 1500  // ms
-  , paddingRight   = 20
+  , i=1
+  , paddingRight   = 22
   , slidesWrapper  = document.querySelector('.choose__area')
   , slides         = document.querySelectorAll('.choose__box')
   // bar xanh = width 25%
@@ -160,12 +181,16 @@ const observer = new IntersectionObserver((entries) => {
     el.style.transition = '1s';
     el.style.transform  = `translateX(${-mov}px)`;
     //cong width cho bar
-
-    ba.style.width =`${width*index}px`;
+    if(i>4){
+      i=0;
+    }      
+    w=`25%*${i}`;
+    bar.style.width=`calc(${w})`;
+    i++;
+    
     });
 
   let index = 0;
-
   while (true) // infinite carrousel loop
     {
     await delay( interval )
@@ -176,3 +201,5 @@ const observer = new IntersectionObserver((entries) => {
     index = ++index % slides.length
     }
   })()
+}
+sliderActive();

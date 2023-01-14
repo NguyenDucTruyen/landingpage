@@ -14,7 +14,15 @@
     <link rel="stylesheet" href="./assets/css/breakpoint3.css">
 
 </head>
-<body>
+<body onload="showPage()">
+    <div  class="loadingPage centerxy">
+        <div class="loader centerxy">
+            <div class="loaderBar loaderBar1"></div>
+            <div class="loaderBar loaderBar2"></div>
+            <div class="loaderBar loaderBar3"></div>
+            <div class="loaderBar loaderBar4"></div>
+        </div>
+    </div>
     <header id="header " class="headerBar" >
         <div class="header__div   centerxy">
             <div class="logobigtech centery">
@@ -235,7 +243,60 @@
                 </div>
             </div>
             <div class="choose__bigarea overflow">
-                <div class="choose__area">
+                <div class="choose__area choose__area--active">
+                    <div class="choose__box choose__box1">
+                        <div class="choose__item">
+                            <div class="choose__icon centerxy">
+                                <img src="./assets/img/choose_icon01.svg" alt="">
+                            </div>
+                            <div class="choose__content">
+                                <h2 class="choose__box__title">
+                                    <a href="">Mobile payment make easy</a>
+                                </h2>
+                                <p>Add new, trending and rare artwork to your collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__box choose__box2">
+                        <div class="choose__item">
+                            <div class="choose__icon centerxy">
+                                <img src="./assets/img/choose_icon02.svg" alt="">
+                            </div>
+                            <div class="choose__content">
+                                <h2 class="choose__box__title">
+                                    <a href="">Lifetime free transaction</a>
+                                </h2>
+                                <p>Add new, trending and rare artwork to your collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__box choose__box3">
+                        <div class="choose__item">
+                            <div class="choose__icon centerxy">
+                                <img src="./assets/img/choose_icon03.svg" alt="">
+                            </div>
+                            <div class="choose__content">
+                                <h2 class="choose__box__title">
+                                    <a href="">Protect the <br> identity</a>
+                                </h2>
+                                <p>Add new, trending and rare artwork to your collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose__box choose__box4">
+                        <div class="choose__item">
+                            <div class="choose__icon centerxy">
+                                <img src="./assets/img/choose_icon04.svg" alt="">
+                            </div>
+                            <div class="choose__content">
+                                <h2 class="choose__box__title">
+                                    <a href="">Sercurity & control over money</a>
+                                </h2>
+                                <p>Add new, trending and rare artwork to your collection.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
                     <div class="choose__box choose__box1">
                         <div class="choose__item">
                             <div class="choose__icon centerxy">
@@ -308,12 +369,22 @@
                             <li> <button class="sale__tabNav__btn choosedBtn"><p>FINDING ALLOCATION</p>    </button></li>
                             <li> <button class="sale__tabNav__btn "> <p>TOKEN ALLOCATION</p></button></li>
                         </ul>
-                        <div class="sale__content">
-                            <h2 class="sale__title sale__title1">1 CNL = 0.0863 BTC</h2>
-                            <h2 class="sale__title sale__title2">2 CNL = 0.0967 BTC</h2>
-                            <p class="sale__introduce">The World's 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
-                        </div>
-                        <a href="" class="sale__buybtn">BUY NOW</a>
+                        <li class="sale__content sale__content1">
+                            <div >
+                                <h2 class="sale__title">1 CNL = 0.0863 BTC</h2>
+                                <p class="sale__introduce sale__introduce2">The World's 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
+                            </div>
+                            <a href="" class="sale__buybtn">BUY NOW</a>
+                        </li>
+                        
+                        <li class="sale__content sale__content2">
+                            <div >
+                                <h2 class="sale__title">2 CNL = 0.0967 BTC</h2>
+                                <p class="sale__introduce sale__introduce2">The World's 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
+                            </div>
+                            <a href="" class="sale__buybtn">BUY NOW</a>
+                        </li>
+                        
                     </div>
                 </div>
                 <div class="sale__diagram positionRight animationFadeTwoSide">

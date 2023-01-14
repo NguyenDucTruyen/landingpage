@@ -15,7 +15,46 @@ body{
     background-position: center;
     background-size: cover;
 }
+.loadingPage{
+    position: fixed;
+    inset: 0;
+    background-color: var(--bgc);
+    z-index: 101;
+}
 
+.loader{
+    width: 40px;
+    height: 40px;
+    gap: 4px;
+}
+.loaderBar{
+    width: 6px;
+    height: 100%;
+    background-color: var(--blue);
+    animation: stretch ease-in-out 1.2s infinite;
+}
+.loaderBar.loaderBar1{
+    animation-delay:0s ;
+}
+.loaderBar.loaderBar2{
+    animation-delay:.1s ;
+}
+.loaderBar.loaderBar3{
+    animation-delay:.2s ;
+}
+.loaderBar.loaderBar4{
+    animation-delay:.3s ;
+}
+@keyframes stretch {
+    0%,
+    40%,
+    100%{
+        transform: scaleY(0.4);
+    }
+    20%{
+        transform: scaleY(1);
+    }
+}
 @keyframes rotate{
     0%{
         transform: rotate(0deg);
@@ -823,11 +862,11 @@ padding: 0;
     position: relative;
     flex-wrap: nowrap;
     padding-bottom: 54px;
+    gap: 20px;
 }
 
 .choose__box{
-    width: 300px;
-    margin: 0 10px;
+    min-width: 24% ;
     border-radius: 20px;
     border: 1px solid var(--blackopacity);
     transition: border ease 0.4s;
@@ -891,6 +930,7 @@ padding: 0;
     left: 0;
     bottom: 0;
     background-color: var(--blue);
+    transition:  width ease 0.4s;
 }
 /* SALE CSS  */
 /* SALE CSS  */
@@ -968,6 +1008,9 @@ padding: 0;
         opacity: 1;
     }
 }
+.sale__content{
+    animation: appear ease 0.6s;
+}
 .sale__title{
     font-family: var(--poppin);
     font-size: 55px;
@@ -976,9 +1019,9 @@ padding: 0;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 35px;
-    animation: appear ease 0.6s;
 }
-.sale__title2{
+.sale__content2{
+    
     display: none;
 }
 .sale__introduce{
@@ -1334,7 +1377,7 @@ padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 80px;
+    
 }
 .documents__img{
     width: 550px;
@@ -1853,7 +1896,7 @@ footer::before{
 }
 
 
-/* Animation class Fade In, fade out */
+/* set Class */
 .fadeIn{
     transform: translateX(0);
     visibility: visible;
@@ -1864,9 +1907,6 @@ footer::before{
     visibility: visible;
     opacity: 1;
 }
-
-
-
 .overflow{
 overflow: hidden;
 }

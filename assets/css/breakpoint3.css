@@ -91,9 +91,7 @@ header .button{
     width: 90%;
 }
 .choose__box{
-    max-width: 530px;
-    width: 90%;
-    min-width: 300px;
+    min-width: 100%;
 }
 .choose__item{
     box-sizing: border-box;

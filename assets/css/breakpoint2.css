@@ -93,6 +93,9 @@ header{
 
 
 /*CHOOSE CSS  */
+.choose__area{
+    /* gap: 30px; */
+}
 .choose .title-subtitle{
     width: 690px;
 }
@@ -106,7 +109,7 @@ header{
     width: 690px;
 }
 .choose__box{
-    width: 335px;
+    min-width: 49%;
 }
 .choose__item{
     width: 255px;
@@ -145,6 +148,9 @@ header{
 }
 
 /* DOCUMENTS CSS */
+.documents{
+    padding-bottom: 80px;
+}
 .documents__content .title-subtitle{
     width: 400px;
 }

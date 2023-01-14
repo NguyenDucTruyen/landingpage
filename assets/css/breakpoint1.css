@@ -91,8 +91,11 @@ header{
 .choose__container{
     width: 960px;
 }
-.choose__box1{
-    display: none;
+.choose__are{
+    gap: 10px;
+}
+.choose__box{
+    width: 32%;
 }
 
 /* SALE CSS */
@@ -111,7 +114,9 @@ header{
 .scroll__present{
     width: 700px;
 }
-
+.roadmap__chart::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
 /* DOCUMENTS CSS */
 .documents__img{
     width: 400px;
