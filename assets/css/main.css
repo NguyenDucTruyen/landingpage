@@ -84,12 +84,12 @@ header{
 }
 @keyframes fadeDown{
     from{
-        transform: translateY(-20px);
-        /* opacity: 0; */
+        transform: translateY(-40px);
+        opacity: 0;
     }
     to{
         transform: translateY(0);
-        /* opacity: 1; */
+        opacity: 1;
     }
 }
 .fixedHeader{
@@ -99,7 +99,7 @@ header{
     z-index: 10;
     background-color: var(--bgc);
     /* transition: all ease 0.4s; */
-    animation: fadeDown ease 1s;
+    animation: fadeDown ease-in-out 1s;
 }
 .logobigtech{
     position: relative;
