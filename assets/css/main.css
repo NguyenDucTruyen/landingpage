@@ -370,6 +370,7 @@ padding: 0;
 .menu__navigation .includeLinkDown{
     height: none;
     transition: all ease 0.7s;
+    overflow: hidden;
 }
 .menu__navigation .includeLinkDown.showNav{
     height: 135px;
@@ -420,12 +421,7 @@ padding: 0;
     left: 0;
     top: 45px;
     display: block;
-    opacity: 0;
     transition:  all ease 0.3s;
-}
-.showNav .menu__2ndnav{
-    opacity: 1;
-    transition-delay: 0.1s;
 }
 .menu__2ndnav li{
     height: 45px;
