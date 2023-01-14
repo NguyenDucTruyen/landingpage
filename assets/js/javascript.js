@@ -75,7 +75,6 @@ window.addEventListener("scroll",activateMenu);
             document.querySelector(".timecount-box__number__seccond").innerHTML=seconds;
          
         },1000);
-        // clearInterval(x);
 }
 countDown();
 
@@ -135,15 +134,16 @@ const observer = new IntersectionObserver((entries) => {
 
   window.addEventListener("scroll", () => {
     if (
-      document.body.scrollTop > 180 ||
-      document.documentElement.scrollTop > 180
+      document.body.scrollTop > 120 ||
+      document.documentElement.scrollTop > 120
     ) {
+      document.querySelector("#home").style.marginTop = "104px"
       document.querySelector(".headerBar").classList.add("fixedHeader");
     } else {
       document.querySelector(".headerBar").classList.remove("fixedHeader");
+      document.querySelector("#home").style.marginTop = "0"
     }
-  });
-  
+  }); 
 
   // let activeTrue = true;
   // let choose__area = document.querySelector(".choose__area");
