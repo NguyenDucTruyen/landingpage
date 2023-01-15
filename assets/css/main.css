@@ -313,6 +313,8 @@ padding: 0;
     visibility: hidden;
     transform: translateX(101%);
     transition: transform  ease-in-out 0.7s;
+    overflow-y: scroll;
+    padding-bottom: 40px;
 }
 .mobile-menu--open{
     transform: translateX(0);

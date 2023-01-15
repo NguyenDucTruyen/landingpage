@@ -17,16 +17,19 @@ function showAndHideMobileMenu(){
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
         closeMobileMenu.classList.toggle("spinActive");
+        document.querySelector("body").classList.toggle("overflow");
     }
     closeMobileMenu.onclick =()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
         closeMobileMenu.classList.toggle("spinActive");
+        document.querySelector("body").classList.toggle("overflow");
     }
     menuBackDrop.onclick = ()=>{
         mobileMenu.classList.toggle("mobile-menu--open");
         menuBackDrop.classList.toggle("menu-backdrop--visibility");
         closeMobileMenu.classList.toggle("spinActive");
+        document.querySelector("body").classList.toggle("overflow");
     }
 }
 showAndHideMobileMenu();
